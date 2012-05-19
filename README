@@ -1,0 +1,10 @@
+PIC Boot Loader Project
+
+This is a small boot loader and Linux command line utility I wrote for use with PIC16F193X series MPU's.
+
+The top level directory contains the boot loader source file, and an example application program,
+and the pcl directory contains the Linux utility.
+
+Steve Rodgers
+hwstar@rodgers.sdcoxmail.com
+
