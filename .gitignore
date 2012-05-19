@@ -1,0 +1,7 @@
+*.hex
+*.o
+*.log
+*.txt
+.svn
+pcl
+
