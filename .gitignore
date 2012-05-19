@@ -3,5 +3,4 @@
 *.log
 *.txt
 .svn
-pcl
-
+pcl/pcl
