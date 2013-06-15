@@ -1,0 +1,462 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1825 ]
+[s S19 . 40 `ui 1 lsize 2 0 `ui 1 appsize 2 2 `ui 1 prodid 2 4 `uc 1 bootvers 1 6 `uc 1 proto 1 7 `[32]uc 1 config 32 8 ]
+[s S26 . 64 `[48]uc 1 rfu 48 0 `uc 1 siglo 1 48 `uc 1 useless1 1 49 `uc 1 sighi 1 50 `uc 1 useless2 1 51 `uc 1 rulo 1 52 `uc 1 useless3 1 53 `uc 1 ruhi 1 54 `uc 1 useless4 1 55 `[4]uc 1 rfu2 4 56 `uc 1 crclo 1 60 `uc 1 useless7 1 61 `uc 1 crchi 1 62 `uc 1 useless8 1 63 ]
+[u S41 . 64 `[64]uc 1 payload 64 0 `S19 1 resp 40 0 `S26 1 i 64 0 ]
+[s S45 . 80 `uc 1 pkttype 1 0 `uc 1 address 1 1 `uc 1 cmd 1 2 `ui 1 param 2 3 `ui 1 seq 2 5 `S41 1 pl 64 7 `[7]uc 1 pad 7 71 `ui 1 crc16 2 78 ]
+[u S54 . 80 `[80]uc 1 buffer 80 0 `S45 1 s 80 0 ]
+"2784 /opt/microchip/xc8/v1.12/include/pic16f1825.h
+[s S59 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 LWLO 1 0 :1:5 
+`uc 1 CFGS 1 0 :1:6 
+`uc 1 EEPGD 1 0 :1:7 
+]
+[u S68 . 1 `S59 1 . 1 0 ]
+"2809
+[s S86 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+[u S95 . 1 `S86 1 . 1 0 ]
+"524
+[s S107 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+[u S116 . 1 `S107 1 . 1 0 ]
+"2964
+[s S129 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+[u S138 . 1 `S129 1 . 1 0 ]
+"41 /opt/microchip/xc8/v1.12/include/eeprom_routines.h
+[s S169 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+]
+[u S176 . 1 `S169 1 . 1 0 ]
+"151 /opt/microchip/xc8/v1.12/include/pic.h
+[s S204 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+[u S211 . 1 `S204 1 . 1 0 ]
+"183 ../bloader.c
+[s S265 . 2 `uc 1 low 1 0 `uc 1 high 1 1 ]
+[u S268 . 2 `ui 1 word 2 0 `S265 1 . 2 0 ]
+"571
+[v F2794 `(v  1 t 0 ]
+"575
+[s S405 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 LWLO 1 0 :1:5 
+`uc 1 CFGS 1 0 :1:6 
+`uc 1 EEPGD 1 0 :1:7 
+]
+[u S414 . 1 `S59 1 . 1 0 ]
+"163
+[v _start_app `(v  1 s 0 start_app ]
+"174
+[v _calc_crc16 `(ui  1 s 2 calc_crc16 ]
+"205
+[v _read_configmem_word `(ui  1 s 2 read_configmem_word ]
+"226
+[v _tx_wait_empty `(v  1 s 0 tx_wait_empty ]
+"241
+[v _putc `(v  1 s 0 putc ]
+"251
+[v _getc `(uc  1 s 1 getc ]
+"267
+[v _send_query_response `(v  1 s 0 send_query_response ]
+"303
+[v _check_appspace `(uc  1 s 1 check_appspace ]
+"334
+[v _process_packet `(uc  1 s 1 process_packet ]
+"437
+[v _do_bootloader `(v  1 s 0 do_bootloader ]
+"512
+[v _main `(i  1 e 2 0 ]
+"571
+[v _isr_redirect `II(v  1 e 0 0 ]
+"26 ../flash.c
+[v _flash_read_row `(v  1 e 0 0 ]
+"56
+[v _flash_write_row `(v  1 e 0 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/abdiv.c
+[v ___abdiv `(c  1 e 1 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/abmod.c
+[v ___abmod `(c  1 e 1 0 ]
+"34 /opt/microchip/xc8/v1.12/sources/abtoft.c
+[v ___abtoft `(f  1 e 3 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/aldiv.c
+[v ___aldiv `(l  1 e 4 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/almod.c
+[v ___almod `(l  1 e 4 0 ]
+"43 /opt/microchip/xc8/v1.12/sources/altoft.c
+[v ___altoft `(f  1 e 3 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/atdiv.c
+[v ___atdiv `(m  1 e 3 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/atmod.c
+[v ___atmod `(m  1 e 3 0 ]
+"38 /opt/microchip/xc8/v1.12/sources/attoft.c
+[v ___attoft `(f  1 e 3 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/awdiv.c
+[v ___awdiv `(i  1 e 2 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/awmod.c
+[v ___awmod `(i  1 e 2 0 ]
+"33 /opt/microchip/xc8/v1.12/sources/awtoft.c
+[v ___awtoft `(f  1 e 3 0 ]
+"3 /opt/microchip/xc8/v1.12/sources/bmul.c
+[v ___bmul `(uc  1 e 1 0 ]
+"63 /opt/microchip/xc8/v1.12/sources/float.c
+[v ___ftpack `(f  1 e 3 0 ]
+"87 /opt/microchip/xc8/v1.12/sources/ftadd.c
+[v ___ftadd `(f  1 e 3 0 ]
+"50 /opt/microchip/xc8/v1.12/sources/ftdiv.c
+[v ___ftdiv `(f  1 e 3 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/ftge.c
+[v ___ftge `(b  1 e 0 0 ]
+"52 /opt/microchip/xc8/v1.12/sources/ftmul.c
+[v ___ftmul `(f  1 e 3 0 ]
+"16 /opt/microchip/xc8/v1.12/sources/ftneg.c
+[v ___ftneg `(f  1 e 3 0 ]
+"17 /opt/microchip/xc8/v1.12/sources/ftsub.c
+[v ___ftsub `(f  1 e 3 0 ]
+"45 /opt/microchip/xc8/v1.12/sources/fttol.c
+[v ___fttol `(l  1 e 4 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/lbdiv.c
+[v ___lbdiv `(uc  1 e 1 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/lbmod.c
+[v ___lbmod `(uc  1 e 1 0 ]
+"28 /opt/microchip/xc8/v1.12/sources/lbtoft.c
+[v ___lbtoft `(f  1 e 3 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/lldiv.c
+[v ___lldiv `(ul  1 e 4 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/llmod.c
+[v ___llmod `(ul  1 e 4 0 ]
+"36 /opt/microchip/xc8/v1.12/sources/lltoft.c
+[v ___lltoft `(f  1 e 3 0 ]
+"3 /opt/microchip/xc8/v1.12/sources/lmul.c
+[v ___lmul `(ul  1 e 4 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/ltdiv.c
+[v ___ltdiv `(um  1 e 3 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/ltmod.c
+[v ___ltmod `(um  1 e 3 0 ]
+"31 /opt/microchip/xc8/v1.12/sources/lttoft.c
+[v ___lttoft `(f  1 e 3 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/lwdiv.c
+[v ___lwdiv `(ui  1 e 2 0 ]
+"5 /opt/microchip/xc8/v1.12/sources/lwmod.c
+[v ___lwmod `(ui  1 e 2 0 ]
+"29 /opt/microchip/xc8/v1.12/sources/lwtoft.c
+[v ___lwtoft `(f  1 e 3 0 ]
+"3 /opt/microchip/xc8/v1.12/sources/tmul.c
+[v ___tmul `(um  1 e 3 0 ]
+"3 /opt/microchip/xc8/v1.12/sources/wmul.c
+[v ___wmul `(ui  1 e 2 0 ]
+"7 eeprom.c
+[v _eecpymem `(v  1 e 0 0 ]
+"25
+[v _memcpyee `(v  1 e 0 0 ]
+"49
+[v ___eetoc `(uc  1 e 1 0 ]
+"57
+[v ___eetoi `(ui  1 e 2 0 ]
+"65
+[v ___eetom `(um  1 e 3 0 ]
+"73
+[v ___eetol `(ul  1 e 4 0 ]
+"81
+[v ___ctoee `(uc  1 e 1 0 ]
+"88
+[v ___itoee `(ui  1 e 2 0 ]
+"95
+[v ___mtoee `(um  1 e 3 0 ]
+"102
+[v ___ltoee `(ul  1 e 4 0 ]
+"109
+[v ___eetoft `(f  1 e 3 0 ]
+"117
+[v ___eetofl `(d  1 e 3 0 ]
+"125
+[v ___fttoee `(f  1 e 3 0 ]
+"132
+[v ___fltoee `(d  1 e 3 0 ]
+"7 eeread.c
+[v _eeprom_read `(uc  1 e 1 0 ]
+"7 eewrite.c
+[v _eeprom_write `(v  1 e 0 0 ]
+[s S19 . 40 `ui 1 lsize 2 0 `ui 1 appsize 2 2 `ui 1 prodid 2 4 `uc 1 bootvers 1 6 `uc 1 proto 1 7 `[32]uc 1 config 32 8 ]
+"151 ../bloader.c
+[s S26 . 64 `[48]uc 1 rfu 48 0 `uc 1 siglo 1 48 `uc 1 useless1 1 49 `uc 1 sighi 1 50 `uc 1 useless2 1 51 `uc 1 rulo 1 52 `uc 1 useless3 1 53 `uc 1 ruhi 1 54 `uc 1 useless4 1 55 `[4]uc 1 rfu2 4 56 `uc 1 crclo 1 60 `uc 1 useless7 1 61 `uc 1 crchi 1 62 `uc 1 useless8 1 63 ]
+[u S41 . 64 `[64]uc 1 payload 64 0 `S19 1 resp 40 0 `S26 1 i 64 0 ]
+[s S45 . 80 `uc 1 pkttype 1 0 `uc 1 address 1 1 `uc 1 cmd 1 2 `ui 1 param 2 3 `ui 1 seq 2 5 `S41 1 pl 64 7 `[7]uc 1 pad 7 71 `ui 1 crc16 2 78 ]
+[u S54 . 80 `[80]uc 1 buffer 80 0 `S45 1 s 80 0 ]
+[v _pkt `S54  1 e 80 0 ]
+"152
+[v _cmd `uc  1 s 1 cmd ]
+[v _myaddress `uc  1 s 1 myaddress ]
+"409 /opt/microchip/xc8/v1.12/include/pic16f1825.h
+[v _PORTA `VEuc  1 e 1 @12 ]
+[s S169 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+]
+"424
+[u S176 . 1 `S169 1 . 1 0 ]
+[v _PORTAbits `VES176  1 e 1 @12 ]
+"458
+[v _PORTC `VEuc  1 e 1 @14 ]
+[s S59 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 LWLO 1 0 :1:5 
+`uc 1 CFGS 1 0 :1:6 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"524
+[u S68 . 1 `S59 1 . 1 0 ]
+[v _PIR1bits `VES68  1 e 1 @17 ]
+"1072
+[v _TRISA `VEuc  1 e 1 @140 ]
+"1121
+[v _TRISC `VEuc  1 e 1 @142 ]
+"1567
+[v _OSCCON `VEuc  1 e 1 @153 ]
+"1952
+[v _LATCbits `VES176  1 e 1 @270 ]
+"2765
+[v _EEADRL `VEuc  1 e 1 @401 ]
+"2784
+[v _EEADRH `VEuc  1 e 1 @402 ]
+"2809
+[v _EEDATL `VEuc  1 e 1 @403 ]
+"2846
+[v _EEDATH `VEuc  1 e 1 @404 ]
+"2882
+[v _EECON1bits `VES68  1 e 1 @405 ]
+"2926
+[v _EECON2 `VEuc  1 e 1 @406 ]
+"2945
+[v _RCREG `VEuc  1 e 1 @409 ]
+"2964
+[v _TXREG `VEuc  1 e 1 @410 ]
+"2989
+[v _SPBRGL `VEuc  1 e 1 @411 ]
+"3027
+[v _RCSTA `VEuc  1 e 1 @413 ]
+"3044
+[v _RCSTAbits `VES68  1 e 1 @413 ]
+"3088
+[v _TXSTA `VEuc  1 e 1 @414 ]
+"3105
+[v _TXSTAbits `VES68  1 e 1 @414 ]
+"2759 /Volumes/build/bamboo/xml-data/build-dir/XC8-RELEASE-JOB1/nz/build/dist/osx/include/pic16f1825.h
+[v _EEADR `VEus  1 e 2 @401 ]
+"2814
+[v _EEDATA `VEuc  1 e 1 @403 ]
+"2865
+[v _EECON1 `VEuc  1 e 1 @405 ]
+"6167
+[v _CARRY `VEb  1 e 0 @24 ]
+"6357
+[v _GIE `VEb  1 e 0 @95 ]
+"6647
+[v _RD `VEb  1 e 0 @3240 ]
+"6965
+[v _WR `VEb  1 e 0 @3241 ]
+"6967
+[v _WREN `VEb  1 e 0 @3242 ]
+"512 ../bloader.c
+[v _main `(i  1 e 2 0 ]
+{
+"566
+} 0
+"437
+[v _do_bootloader `(v  1 s 0 do_bootloader ]
+{
+"438
+[v do_bootloader@c `uc  1 a 1 25 ]
+"439
+[v do_bootloader@i `uc  1 a 1 24 ]
+"506
+} 0
+"163
+[v _start_app `(v  1 s 0 start_app ]
+{
+"167
+} 0
+"251
+[v _getc `(uc  1 s 1 getc ]
+{
+"261
+} 0
+"267
+[v _send_query_response `(v  1 s 0 send_query_response ]
+{
+"270
+[v send_query_response@v `ui  1 a 2 2 ]
+"269
+[v send_query_response@i `uc  1 a 1 5 ]
+"268
+[v send_query_response@q `*.0uc  1 a 1 4 ]
+"297
+} 0
+"205
+[v _read_configmem_word `(ui  1 s 2 read_configmem_word ]
+{
+[v read_configmem_word@wordaddr `uc  1 a 1 wreg ]
+"206
+[v read_configmem_word@retval `ui  1 a 2 6 ]
+"205
+[v read_configmem_word@wordaddr `uc  1 a 1 wreg ]
+"218
+} 0
+"241
+[v _putc `(v  1 s 0 putc ]
+{
+[v putc@c `uc  1 a 1 wreg ]
+[v putc@c `uc  1 a 1 wreg ]
+"244
+} 0
+"226
+[v _tx_wait_empty `(v  1 s 0 tx_wait_empty ]
+{
+"234
+} 0
+"334
+[v _process_packet `(uc  1 s 1 process_packet ]
+{
+"340
+[v process_packet@param `ui  1 a 2 19 ]
+"338
+[v process_packet@crc16 `ui  1 a 2 16 ]
+"335
+[v process_packet@i `uc  1 a 1 22 ]
+"336
+[v process_packet@acknak `uc  1 a 1 21 ]
+"337
+[v process_packet@eeaddress `uc  1 a 1 18 ]
+"339
+[v process_packet@seqno `ui  1 s 2 seqno ]
+[v process_packet@pseq `ui  1 s 2 pseq ]
+"341
+[v process_packet@write_en `b  1 s 0 write_en ]
+"432
+} 0
+"303
+[v _check_appspace `(uc  1 s 1 check_appspace ]
+{
+"304
+[v check_appspace@crc16 `ui  1 a 2 12 ]
+[v check_appspace@i `ui  1 a 2 10 ]
+[v check_appspace@pmaddr `ui  1 a 2 8 ]
+[v check_appspace@rowsused `ui  1 a 2 6 ]
+[v check_appspace@appcrc16 `ui  1 a 2 4 ]
+"328
+} 0
+"174
+[v _calc_crc16 `(ui  1 s 2 calc_crc16 ]
+{
+[s S265 . 2 `uc 1 low 1 0 `uc 1 high 1 1 ]
+"183
+[u S268 . 2 `ui 1 word 2 0 `S265 1 . 2 0 ]
+[v calc_crc16@crc `S268  1 a 2 9 ]
+"175
+[v calc_crc16@j `uc  1 a 1 8 ]
+[v calc_crc16@i `uc  1 a 1 7 ]
+"174
+[v calc_crc16@crcin `ui  1 p 2 1 ]
+[v calc_crc16@buf `*.0uc  1 p 1 3 ]
+[v calc_crc16@len `uc  1 p 1 4 ]
+"176
+[v calc_crc16@dogen `b  1 s 0 dogen ]
+"198
+} 0
+"26 ../flash.c
+[v _flash_read_row `(v  1 e 0 0 ]
+{
+"29
+[v flash_read_row@i `ui  1 a 2 8 ]
+"28
+[v flash_read_row@wa `ui  1 a 2 6 ]
+"27
+[v flash_read_row@pma `*.0ui  1 a 1 5 ]
+"26
+[v flash_read_row@pm_word_addr `ui  1 p 2 1 ]
+[v flash_read_row@buffer `*.0v  1 p 1 3 ]
+"44
+} 0
+"56
+[v _flash_write_row `(v  1 e 0 0 ]
+{
+"59
+[v flash_write_row@v `ui  1 a 2 8 ]
+"58
+[v flash_write_row@wa `ui  1 a 2 6 ]
+"60
+[v flash_write_row@j `uc  1 a 1 11 ]
+[v flash_write_row@i `uc  1 a 1 10 ]
+"57
+[v flash_write_row@b `*.0ui  1 a 1 5 ]
+"56
+[v flash_write_row@pm_word_addr `ui  1 p 2 1 ]
+[v flash_write_row@buffer `*.0v  1 p 1 3 ]
+"96
+} 0
+"7 eewrite.c
+[v _eeprom_write `(v  1 e 0 0 ]
+{
+[v eeprom_write@addr `uc  1 a 1 wreg ]
+[v eeprom_write@addr `uc  1 a 1 wreg ]
+[v eeprom_write@value `uc  1 p 1 1 ]
+"9
+} 0
+"7 eeread.c
+[v _eeprom_read `(uc  1 e 1 0 ]
+{
+[v eeprom_read@addr `uc  1 a 1 wreg ]
+[v eeprom_read@addr `uc  1 a 1 wreg ]
+"12
+} 0
+"571 ../bloader.c
+[v _isr_redirect `II(v  1 e 0 0 ]
+{
+"575
+} 0
